@@ -25,9 +25,17 @@
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
     <script>
+      $("#trivia-form").on("submit",function(event){
+event.preventDefault();
+var $answer = $("#trivia-answer");
+var answer = $answer.val();
 
-
-
+if (answer == 'hall') {
+  $('#result').text("YAYYY YOU GOT IT RIGHTT!!");
+} else {
+  $('#result').text("BOO YOU GOT IT WRONGGG!!");
+}
+});
     </script>
   </body>
 </html>
